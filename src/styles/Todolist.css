@@ -14,6 +14,7 @@
 .Todolist h1, .Todolist h2 {
   font-weight: 400;
   letter-spacing: 2px;
+  cursor: default;
 }
 
 .Todolist h1 {
@@ -36,8 +37,9 @@
 
 @media only screen and (max-width: 375px) {
   .Todolist {
-    display: relative;
+    position: relative;
     margin: 0;
+    padding-bottom: 127px;
     width: 100%;
     min-height: 100vh;
     box-shadow: none;

@@ -13,6 +13,7 @@ class Todolist extends React.Component {
     
     this.addTodo = this.addTodo.bind(this);
     this.removeTodo = this.removeTodo.bind(this);
+    this.updateTodo = this.updateTodo.bind(this);
   }
   
   addTodo(todo) {
@@ -22,13 +23,24 @@ class Todolist extends React.Component {
     }
     this.setState({
       todos: [...this.state.todos, newTodo]
-    })
+    });
   }
   
   removeTodo(id) {
-    console.log(id)
     this.setState({
       todos: this.state.todos.filter(todo => todo.id !== id)
+    });
+  }
+  
+  updateTodo(id, updatedTask) {
+    const updatedTodos = this.state.todos.map(todo => {
+      if(todo.id === id) {
+        return {...todo, text: updatedTask}
+      }
+      return todo;
+    });
+    this.setState({
+      todos: updatedTodos
     });
   }
   
@@ -43,6 +55,7 @@ class Todolist extends React.Component {
             id={todo.id} 
             key={todo.id} 
             removeTodo={this.removeTodo}
+            updateTodo={this.updateTodo}
           />
         ))}
         <Form addTodo={this.addTodo} />
