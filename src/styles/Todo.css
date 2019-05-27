@@ -1,0 +1,30 @@
+.Todo {
+  display: flex;
+  background-color: rgb(255, 107, 105);
+  width: 100%;
+  margin-bottom: 2px;
+  padding: .4rem;
+  padding-left: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  word-break: break-all;
+}
+
+.Todo div {
+  display: flex;
+  justify-content: center;
+  min-width: 4rem;
+}
+
+.Todo p {
+  margin-right: 10px;
+  flex-grow: 1;
+}
+
+.Todo i {
+  margin: .2rem;
+}
+
+.Todo i:hover {
+  cursor: pointer;
+}

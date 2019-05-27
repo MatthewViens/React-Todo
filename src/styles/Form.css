@@ -1,0 +1,61 @@
+.Form {
+  padding: 2rem;
+  padding-left: 1.5rem;
+}
+
+.Form label {
+  display: block;
+}
+
+.Form div {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.Form input {
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.Form button {
+  font-size: 1rem;
+  border: none;
+  padding: 9px 22px;
+  margin-left: 3px;
+  color: #fff;
+  background-color: rgb(253, 91, 92);
+  border: 1px solid #fff;
+}
+
+.Form button:hover {
+  background-color: rgb(255, 107, 105);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 375px) {
+  .Form {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .Form div {
+    flex-direction: column;
+    width: 100%
+  }
+  
+  .Form input {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .Form button {
+    margin-top: 5px;
+    width: 100%;
+    margin: 0;
+  }
+}
