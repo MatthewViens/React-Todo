@@ -14,6 +14,7 @@ class Todo extends React.Component {
     this.toggleForm = this.toggleForm.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleToggle = this.handleToggle.bind(this);
   }
   
   handleClick() {
@@ -40,6 +41,10 @@ class Todo extends React.Component {
     });
   }
   
+  handleToggle(e) {
+    this.props.toggleCompletion(this.props.id);
+  }
+  
   render() {
     return (
       <div className="Todo">
@@ -51,7 +56,10 @@ class Todo extends React.Component {
                 name="text" 
                 type="text" />
             </form> 
-          : <p>{this.props.text}</p>}
+          : <p 
+              className={this.props.completed ? "completed" : "false"}
+              onClick={this.handleToggle}>{this.props.text}
+            </p>}
         <div>
           <i onClick={
             this.state.isEditing 

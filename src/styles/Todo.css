@@ -44,3 +44,7 @@
 .Todo .isEditing {
   color: #fd5b5c;
 }
+
+.Todo .completed {
+  text-decoration: line-through;
+}
