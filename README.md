@@ -1,7 +1,7 @@
 # React Todo
 
 A simple React todo list. Add, delete, edit, and/or crossout todos.
-[View Live](https://MatthewViens.github.io/React-Todo)
+[View Live](https://MatthewViens.github.io/React-Todo).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
